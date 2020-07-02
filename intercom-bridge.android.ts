@@ -34,10 +34,6 @@ export class IntercomBridge {
     io.intercom.android.sdk.Intercom.client().reset();
   }
 
-  static setSecureMode(secureHash: string, secureData: string) {
-    io.intercom.android.sdk.Intercom.client().setSecureMode(secureHash, secureData);
-  }
-
   static setUserHash(hmac: string) {
     io.intercom.android.sdk.Intercom.client().setUserHash(hmac);
   }

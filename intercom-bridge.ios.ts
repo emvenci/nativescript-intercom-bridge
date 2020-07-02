@@ -29,10 +29,6 @@ export class IntercomBridge {
     Intercom.reset();
   }
 
-  static setSecureMode(secureHash: string, secureData: string) {
-    Intercom.setHMACData(secureHash, secureData);
-  }
-
   static setUserHash(hmac: string) {
     Intercom.setUserHash(hmac);
   }

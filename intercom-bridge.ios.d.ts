@@ -6,7 +6,7 @@ export declare class IntercomBridge {
     }): void;
     static registerUnidentifiedUser(): void;
     static reset(): void;
-    static setSecureMode(secureHash: string, secureData: string): void;
+    static logout(): void;
     static setUserHash(hmac: string): void;
     static updateUser(attributes: any): void;
     static logEvent(eventName: string, metaData?: any): void;

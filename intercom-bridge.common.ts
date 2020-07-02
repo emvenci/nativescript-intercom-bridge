@@ -5,8 +5,17 @@ export declare class IntercomBridge {
         email?: string;
     }): void;
     static registerUnidentifiedUser(): void;
+    /**
+    *
+    * **Deprecate** [Intercom reset] in favour of [Intercom logout]
+    * https://github.com/intercom/intercom-ios/blob/master/CHANGELOG.md#410-2017-10-06
+    * https://github.com/intercom/intercom-android/blob/master/CHANGELOG.md#version-410
+    * 
+    * @static
+    * @memberof IntercomBridge
+    */
     static reset(): void;
-    static setSecureMode(secureHash: string, secureData: string): void;
+    static logout(): void;
     static setUserHash(hmac: string): void;
     static updateUser(attributes: any): void;
     static logEvent(eventName: string, metaData?: any): void;

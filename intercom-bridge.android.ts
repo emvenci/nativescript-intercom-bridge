@@ -34,6 +34,10 @@ export class IntercomBridge {
     io.intercom.android.sdk.Intercom.client().reset();
   }
 
+  static logout() {
+    io.intercom.android.sdk.Intercom.client().logout();
+  }
+
   static setUserHash(hmac: string) {
     io.intercom.android.sdk.Intercom.client().setUserHash(hmac);
   }

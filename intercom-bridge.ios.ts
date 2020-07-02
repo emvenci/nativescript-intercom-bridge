@@ -24,9 +24,13 @@ export class IntercomBridge {
   static registerUnidentifiedUser() {
     Intercom.registerUnidentifiedUser();
   }
-
+  
   static reset() {
     Intercom.reset();
+  }
+
+  static logout() {
+    Intercom.logout();
   }
 
   static setUserHash(hmac: string) {

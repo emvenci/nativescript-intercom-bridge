@@ -38,7 +38,7 @@ export class IntercomBridge {
   }
 
   static updateUser(attributes: any) {
-    Intercom.updateUserWithAttributes(attributes);
+    Intercom.updateUser(attributes);
   }
 
   static logEvent(eventName:string, metaData?: any) {

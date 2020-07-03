@@ -11,19 +11,11 @@
     }
   },
   "scripts": {
-    "build": "tsc",
-    "demo.ios": "npm run preparedemo && cd demo && tns run ios --emulator",
-    "demo.ios.device": "npm run preparedemo && cd demo && tns run ios",
-    "demo.android": "npm run preparedemo && cd demo && tns run android --emulator",
-    "test.ios": "cd demo && tns test ios --emulator",
-    "test.ios.device": "cd demo && tns test ios",
-    "test.android": "cd demo && tns test android",
-    "preparedemo": "npm run build && cd demo && tns plugin remove nativescript-intercom-bridge-updated && tns plugin add .. && tns install",
-    "setup": "npm i && cd demo && npm i && cd .. && npm run build && cd demo && tns plugin add .. && cd .."
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/aemr3/nativescript-intercom-bridge.git"
+    "url": "https://github.com/chadzxrex/nativescript-intercom-bridge.git"
   },
   "keywords": [
     "NativeScript",
@@ -32,14 +24,14 @@
     "iOS"
   ],
   "author": {
-    "name": "Emre Suzen",
-    "email": "e@emre.pm"
+    "name": "Chad Zhuang",
+    "email": "chadzhuang@xrex.io"
   },
   "bugs": {
     "url": "https://github.com/aemr3/nativescript-intercom-bridge/issues"
   },
   "license": "MIT",
-  "homepage": "https://github.com/aemr3/nativescript-intercom-bridge",
+  "homepage": "https://github.com/chadzxrex/nativescript-intercom-bridge",
   "readmeFilename": "README.md",
   "devDependencies": {
     "tns-core-modules": "^6.1.0",

@@ -21,7 +21,6 @@ export declare class IntercomBridge {
     static logEvent(eventName: string, metaData?: any): void;
     static displayMessenger(): void;
     static displayMessageComposer(initialMessage?: string): void;
-    
     /**
     *
     * **Deprecate** Should use displayMessenger instead.

@@ -11,8 +11,7 @@ export declare class IntercomBridge {
     static updateUser(attributes: any): void;
     static logEvent(eventName: string, metaData?: any): void;
     static displayMessenger(): void;
-    static displayMessageComposer(): void;
-    static displayMessageComposerWithInitialMessage(initialMessage: string): void;
+    static displayMessageComposer(initialMessage?: string): void;
     static displayConversationsList(): void;
     static unreadConversationCount(): any;
     static setLauncherVisibility(visible: boolean): void;

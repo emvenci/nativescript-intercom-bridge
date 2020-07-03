@@ -21,6 +21,19 @@ export declare class IntercomBridge {
     static logEvent(eventName: string, metaData?: any): void;
     static displayMessenger(): void;
     static displayMessageComposer(initialMessage?: string): void;
+    
+    /**
+    *
+    * **Deprecate** Should use displayMessenger instead.
+    * 
+    * To be noticed, displayConversationsList is still the only method to open the convensation list, directly. And it still can be used for now.
+    * 
+    * https://github.com/intercom/intercom-ios/blob/master/CHANGELOG.md#510
+    * https://github.com/intercom/intercom-android/blob/master/CHANGELOG.md#version-510
+    * 
+    * @static
+    * @memberof IntercomBridge
+    */
     static displayConversationsList(): void;
     static unreadConversationCount(): any;
     static setLauncherVisibility(visible: boolean): void;

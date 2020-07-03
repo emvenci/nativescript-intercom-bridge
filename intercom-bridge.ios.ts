@@ -53,12 +53,12 @@ export class IntercomBridge {
     Intercom.presentMessenger();
   }
 
-  static displayMessageComposer() {
-    Intercom.presentMessageComposer();
-  }
-
-  static displayMessageComposerWithInitialMessage(initialMessage: string) {
-    Intercom.presentMessageComposerWithInitialMessage(initialMessage);
+  static displayMessageComposer(initialMessage?: string) {
+    if(!!initialMessage) {
+      Intercom.presentMessageComposer(initialMessage);
+    } else {
+      Intercom.presentMessageComposer();
+    }
   }
 
   static displayConversationsList() {

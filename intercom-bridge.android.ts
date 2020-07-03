@@ -58,12 +58,12 @@ export class IntercomBridge {
     io.intercom.android.sdk.Intercom.client().displayMessenger();
   }
 
-  static displayMessageComposer() {
-    io.intercom.android.sdk.Intercom.client().displayMessageComposer();
-  }
-
-  static displayMessageComposerWithInitialMessage(initialMessage: string) {
-    io.intercom.android.sdk.Intercom.client().displayMessageComposer(initialMessage);
+  static displayMessageComposer(initialMessage?: string) {
+    if(!!initialMessage) {
+      io.intercom.android.sdk.Intercom.client().displayMessageComposer(initialMessage);
+    } else {
+      io.intercom.android.sdk.Intercom.client().displayMessageComposer();
+    }
   }
 
   static displayConversationsList() {

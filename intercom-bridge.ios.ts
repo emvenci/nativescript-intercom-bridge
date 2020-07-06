@@ -42,7 +42,7 @@ export class IntercomBridge {
   }
 
   static logEvent(eventName:string, metaData?: any) {
-    if (metaData && metaData.length) {
+    if (!!metaData) {
       Intercom.logEventWithNameMetaData(eventName, metaData);
     } else {
       Intercom.logEventWithName(eventName);

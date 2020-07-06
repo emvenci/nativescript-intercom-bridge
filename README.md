@@ -90,6 +90,18 @@ setUserHash(hash: string) {
     IntercomBridge.setUserHash(hash);
 }
 
+/**
+ * 
+ * Log event of user's behavior in the Intercom.
+ * 
+ * eventName: Recommend defined the event name as 'verb-noun'
+ * metaData: Object consists of event's information, i.e. order_item, order_date.
+ * More info: https://developers.intercom.com/intercom-api-reference/reference#event-model
+ */
+logEvent(eventName: string, metaData?: any) {
+    IntercomBridge.logEvent(eventName, metaData);
+}
+
 
 ```
 

@@ -47,7 +47,7 @@ export class IntercomBridge {
   }
 
   static logEvent(eventName: string, metaData?: any) {
-    if (metaData && metaData.length) {
+    if (!!metaData) {
         io.intercom.android.sdk.Intercom.client().logEvent(eventName, metaData);
     } else {
         io.intercom.android.sdk.Intercom.client().logEvent(eventName);

@@ -18,6 +18,17 @@ export declare class IntercomBridge {
     static logout(): void;
     static setUserHash(hmac: string): void;
     static updateUser(attributes: any): void;
+    /**
+    * 
+    * Log events of user's behavior in the Intercom.
+    * 
+    * eventName: Recommend defined the event name as 'verb-noun'
+    * metaData: Object consists of event's information, i.e. order_item, order_date.
+    * More info: https://developers.intercom.com/intercom-api-reference/reference#event-model
+    * 
+    * @static
+    * @memberof IntercomBridge
+    */
     static logEvent(eventName: string, metaData?: any): void;
     static displayMessenger(): void;
     static displayMessageComposer(initialMessage?: string): void;

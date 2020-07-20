@@ -47,6 +47,9 @@ export class IntercomBridge {
     const builder = new Att.Builder();
 
     Object.keys(attributes).forEach(key => {
+        if(key === 'customAttributes') {
+          return;
+        }
         const methodName = key && typeof(key) === 'string' && `with${key.charAt(0).toUpperCase()}${key.slice(1)}`
         const value = attributes[key];
         if(!methodName || !builder[methodName]) {
@@ -55,6 +58,11 @@ export class IntercomBridge {
         builder[methodName](value);
     });
 
+    if(attributes && typeof attributes === 'object' && attributes.hasOwnProperty('customAttributes')) {
+      Object.keys(attributes.customAttributes).forEach(key => {
+        builder.withCustomAttribute(key, attributes.customAttributes[key]);
+      });
+    }
     io.intercom.android.sdk.Intercom.client().updateUser(builder.build());
 
   }

@@ -1,4 +1,5 @@
 declare var Intercom: any;
+declare var ICMUserAttributes: any;
 
 export class IntercomBridge {
   static init(apiKey: string, appId: string) {
@@ -38,7 +39,14 @@ export class IntercomBridge {
   }
 
   static updateUser(attributes: any) {
-    Intercom.updateUser(attributes);
+    const userInformation = new ICMUserAttributes();
+    
+    Object.keys(attributes).forEach(key => {
+      const value = attributes[key];
+      userInformation[key] = value;
+    });
+      
+    Intercom.updateUser(userInformation);
   }
 
   static logEvent(eventName:string, metaData?: any) {

@@ -43,7 +43,20 @@ export class IntercomBridge {
   }
 
   static updateUser(attributes: any) {
-    io.intercom.android.sdk.Intercom.client().updateUser(attributes);
+    const Att = io.intercom.android.sdk.UserAttributes;
+    const builder = new Att.Builder();
+
+    Object.keys(attributes).forEach(key => {
+        const methodName = key && typeof(key) === 'string' && `with${key.charAt(0).toUpperCase()}${key.slice(1)}`
+        const value = attributes[key];
+        if(!methodName || !builder[methodName]) {
+            return;
+        }
+        builder[methodName](value);
+    });
+
+    io.intercom.android.sdk.Intercom.client().updateUser(builder.build());
+
   }
 
   static logEvent(eventName: string, metaData?: any) {

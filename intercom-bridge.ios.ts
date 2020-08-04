@@ -92,4 +92,8 @@ export class IntercomBridge {
   static enableLogging() {
     Intercom.enableLogging();
   }
+
+  static setDeviceToken(token: string) {
+    Intercom.setDeviceToken(token);
+  }
 }

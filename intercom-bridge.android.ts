@@ -4,6 +4,7 @@ import * as utils from 'tns-core-modules/utils/utils';
 declare let io: any;
 
 export class IntercomBridge {
+  public static intercomPushClient = new io.intercom.android.sdk.push.IntercomPushClient();
   static init(apiKey: string, appId: string) {
     io.intercom.android.sdk.Intercom.initialize(utils.ad.getApplicationContext(), apiKey, appId);
   }

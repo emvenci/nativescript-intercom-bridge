@@ -4,6 +4,6 @@ android {
 }
 
 dependencies {
-    implementation 'io.intercom.android:intercom-sdk-base:5.+'
+    implementation 'io.intercom.android:intercom-sdk:5.+'
     compile 'com.android.support:multidex:1.0.0'
 }

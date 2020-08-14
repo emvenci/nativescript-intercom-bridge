@@ -1,4 +1,5 @@
 export declare class IntercomBridge {
+    static intercomPushClient: any;
     static init(apiKey: string, appId: string): void;
     static registerIdentifiedUser(options: {
         userId?: string | number;

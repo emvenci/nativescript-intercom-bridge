@@ -51,4 +51,12 @@ export declare class IntercomBridge {
     static hideMessenger(): void;
     static enableLogging(): void;
     static setDeviceToken(token: string): void;
+    /**
+     * Android only intercom push notification option object
+     *
+     * @static
+     * @returns {*}
+     * @memberof IntercomBridge
+     */
+    static intercomPushClient: any;
 }

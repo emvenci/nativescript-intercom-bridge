@@ -1,5 +1,5 @@
 {
-  "name": "nativescript-intercom-bridge-xrex",
+  "name": "nativescript-intercom-bridge-ebs",
   "version": "1.1.1",
   "description": "Fork from NativeScript Plugin for Intercom. Updated Version",
   "main": "intercom-bridge",
@@ -16,23 +16,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/chadzxrex/nativescript-intercom-bridge.git"
+    "url": "https://github.com/emvenci/nativescript-intercom-bridge.git"
   },
   "keywords": [
     "NativeScript",
     "JavaScript",
     "Android",
-    "iOS"
+    "iOS",
+    "Intercom"
   ],
-  "author": {
-    "name": "Chad Zhuang",
-    "email": "chadzhuang@xrex.io"
-  },
-  "bugs": {
-    "url": "https://github.com/aemr3/nativescript-intercom-bridge/issues"
-  },
+  "author": "Emvenci Business Services",
   "license": "MIT",
-  "homepage": "https://github.com/chadzxrex/nativescript-intercom-bridge",
+  "homepage": "https://github.com/emvenci/nativescript-intercom-bridge",
   "readmeFilename": "README.md",
   "devDependencies": {
     "tns-core-modules": "^6.1.0",

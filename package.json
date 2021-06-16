@@ -1,6 +1,6 @@
 {
   "name": "nativescript-intercom-bridge-xrex",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Fork from NativeScript Plugin for Intercom. Updated Version",
   "main": "intercom-bridge",
   "typings": "index.d.ts",

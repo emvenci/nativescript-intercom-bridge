@@ -1,16 +1,21 @@
 {
     "compilerOptions": {
-        "target": "es6",
-        "module": "commonjs",
+        "module": "esnext",
+        "target": "es2017",
+        "moduleResolution": "node",
         "declaration": true,
         "removeComments": false,
         "noLib": false,
         "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
+        "resolveJsonModule": true,
+        "esModuleInterop": true,
+        "skipLibCheck": true,
         "lib": [
-            "es6",
+            "es2018",
+            "es2017",
             "dom",
-            "es2015.iterable"
+            "es6"
         ],
         "sourceMap": true,
         "pretty": true,

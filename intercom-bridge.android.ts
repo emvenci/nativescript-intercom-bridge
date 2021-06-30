@@ -1,5 +1,4 @@
-import * as application from 'tns-core-modules/application';
-import * as utils from 'tns-core-modules/utils/utils';
+import * as utils from '@nativescript/core/utils';
 
 declare let io: any;
 
